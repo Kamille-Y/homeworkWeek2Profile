@@ -6,20 +6,80 @@
 }
 body{
     font-family:'RocknRoll One', sans-serif;
-    color: #333 ;
+    color:#333 ;
     line-height: 1.6 ;
 }
 ul{
-    list-style: none;
+    list-style: flex;
+    list-style-type: none;
+    justify-content: space-between;
 }   
 a{text-decoration: none;
     color: #333 ;
 }
-h1,h2 {
+h2{
     font-weight: 300;
-    line-height: 1.2;
-    margin: 10px;
+    line-height: 2.0em;
+    text-align: justify;
+    background-color:#047aed ;
+}
+h1 {
+    display: flex;
+    background-color: #d8a47f;
+    height: 100px;
+    margin: 0%;
+    justify-content: space-between;}
+
+ li {font-size: 1rem;}  
+
+
+.flex{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+
 }
 p{
     width: 600px;
 }
+#img1 {
+    width: 70%;
+  }
+  footer {
+    flex-shrink: 0;
+    padding: 50px 40px;
+    text-align: center;
+    background: #d8a47f;
+    color: #fff;
+    margin-top: none;}
+  
+  .photo {
+    padding: 20px 10px;
+    border: 2px solid #bfbfbf;
+    background-color: #fff;   
+}
+.scale {
+    transform: scale(1. 1);
+    text-size-adjust:80% ;
+  }
+  
+  .container{
+        max-width: 800px;
+        margin: 0;
+        height:px
+    }
+    @media screen and (max-width: 768px) {
+        main,
+        nav {
+          flex-direction: column;
+        }
+        header {
+          background: #772014;
+        }
+        nav,
+        footer {
+          background-color: #bb8588;
+        }
+  
+    
+      }
