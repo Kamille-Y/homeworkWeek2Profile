@@ -5,10 +5,10 @@
     margin: 0;
 }
 body{
-    font-family:'RocknRoll One', sans
-    co
-    color:#333 ;
-    line-height: 1.6 ;
+    font-family:'RocknRoll One'; 
+    line-height: 1.6rem ;
+    background-color: #9bcfea;
+    
 }
 ul{
     list-style: flex;
@@ -16,7 +16,7 @@ ul{
     justify-content: space-between;
 }   
 a{text-decoration: none;
-    color: #333 ;
+    color: #047aed;
 }
 h2{
     font-weight: 300;
@@ -26,7 +26,7 @@ h2{
 }
 h1 {
     display: flex;
-    background-color: #d8a47f;
+    background-color: #f6c4df;
     height: 100px;
     margin: 0%;
     justify-content: space-between;}
@@ -50,14 +50,15 @@ p{
     flex-shrink: 0;
     padding: 50px 40px;
     text-align: center;
-    background: #d8a47f;
+    background: #9bcfea ;
     color: #fff;
     margin-top: none;}
   
   .photo {
     padding: 20px 10px;
-    border: 2px solid #bfbfbf;
-    background-color: #fff;   
+    border: 2px solid #154167;
+    background-color: #9bcfea    
+
 }
 .scale {
     transform: scale(1. 1);
@@ -68,7 +69,8 @@ p{
         max-width: 800px;
         margin: 0;
         height:px
-    }
+
+      }
     @media screen and (max-width: 768px) {
         main,
         nav {
@@ -78,14 +80,10 @@ p{
           background: #772014;
         }
         nav,
+
         footer {
           background-color: #bb8588;
         }
-  
-    
-      } footer {
-          background-color: #bb8588;
+        
+
         }
-  
-    
-      }
