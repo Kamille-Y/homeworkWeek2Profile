@@ -1,69 +1,145 @@
 @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
-*{
+*,
+*::before
+*::after{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-body{
-    font-family:'RocknRoll One'; 
-    line-height: 1.6rem ;
-    background-color: #aec8d6;
-    
+/* these are custome properties that I can set like global choices that will automatically update
+wherever they are used I really like using custome properties */
+:root {
+  --ff-primary: 'Source Sans Pro', sans-serif;
+  --ff-secondary: 'Source Code Pro', monospace;
+  
+  --fw-reg: 300;
+  --fw-bold: 900;
+  
+  --clr-light: #aec8d6;
+  --clr-dark: #303030;
+  --clr-accent: #16e0bd;
+  
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  
+  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+        0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
+@media (min-width: 800px) {
+  :root {
+      --fs-h1: 4.5rem;
+      --fs-h2: 3.75rem;
+      --fs-h3: 1.5rem;
+      --fs-body: 1.125rem;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+body{
+  font-family: var(--ff-primary); 
+  line-height: 1.6rem ;
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  font-size: var(--fs-body);
+  
+}
+
+section {
+  padding: 5em 2em
+}
+/*  setting img in a block and at max with prevents them from appearing to large
+and breaking the code */
 
 img{
-  height: 70%;
-  justify-content: center;
-  float: none;
+  display: block;
+  max-width: 100%;
+ 
 }
 
-ul{
-    list-style: flex;
-    list-style-type: none;
-    justify-content: right;
-}   
-a{text-decoration: none;
-    color: #047aed;
+strong {font-weight: var(--fw-bold);}
+/* this is styling my basic typography this will make my text responsive and diffrent stylong to 
+my differing h headers*/
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  margin: 0;
 }
-h2{
-    font-weight: 300;
-    line-height: 2.0em;
-    text-align: justify;
-    background-color:#047aed ;
-}
-h1 {
-    display: flex;
-    background-color: #f6c4df;
-    height: 100px;
-    margin: 0%;
-    justify-content: center;}
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
 
- li {font-size: 1rem;
-  justify-content: left;
-}  
-.float-right {
+.sectionTitle{
+  margin-bottom: .25em
+
+}
+
+.sectionTitle-intro{
+  font-weight: var(--fw-reg);
+
+}
+/* This is a compound selector in css */
+.sectionTitle-intro strong{
+  display: block;
+
+}
+/*  I am styling this because it is a p tag and I want it t obe fancey like the tutorial
+this was easier for me */
+
+.pTitle{
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+.pTitle-about,
+.pTitle-intro{
+  background: var(--clr-accent);
+  font-family: var(--ff-secondary);
+  margin-bottom: 1em;
+  align-self: start;
+  grid-column: -1 / 1;
+  grid-row: 2;
+}
+.nav {
+  display: flex;
   float: right;
-  margin-left: 25px;
 }
-.float-left{
-  float: left;
-  margin: 25px;
+/* Intro section  */
+.intro {
+  position: relative;
+
 }
-
-
-
-p{
-    width: 600px;
-}
-.img1 {
-    width: 200px;
-    height: 200px ;
+/* gid templates helps my site to b more responsive
+for diffrent screen sizes */
+@media screen and (max-width: 600px) {
+  .intro {
+    display: grid;
+    margin: auto;
+    width: min-content;
+    grid-column-gap: 1em;
+    grid-template-areas: 
+    "img title"
+    "img subtitle";
+    grid-template-columns: min-content max-content;
+    /* Im not to sure about this */
   }
-  .img2 {
-    width: 200px;
-    height: 200px ;
-    float: right;}
-    
+  
+  .introImage {
+    grid-area: img;
+    min-width: 250px;
+    position: relative;
+    z-index: 2;
+  }
+
+}
+.img2 {
+  width: 200px;
+  height: 200px ;
+  }
+
   footer {
     flex-shrink: 0;
     padding: 50px 40px;
@@ -71,37 +147,22 @@ p{
     background: #9bcfea ;
     color: #fff;
     margin-top: none;}
-  
-  .photo {
-    padding: 20px 10px;
-    border: 2px solid #154167;
-    background-color: #9bcfea    
 
-}
-.scale {
-    transform: scale(1. 1);
-    text-size-adjust:80% ;
-  }
   
-  .container{
-        max-width: 800px;
-        margin: 0;
-        height:px
-
+  @media screen and (max-width: 768px) {
+      main,
+      nav {
+        flex-direction: column;
       }
-    @media screen and (max-width: 768px) {
-        main,
-        nav {
-          flex-direction: column;
-        }
-        header {
-          background: #772014;
-        }
-        nav,
+      header {
+        background: #772014;
+      }
+      nav,
 
-        footer {
-          background-color: #bb8588;
-        }
+      footer {
+        background-color: #bb8588;
+      } 
+    }
         
 
-        }
+        
