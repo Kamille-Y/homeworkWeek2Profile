@@ -17,7 +17,7 @@ wherever they are used I really like using custome properties */
   
   --clr-light: #aec8d6;
   --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  --clr-accent: #b269ee;
   
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -46,6 +46,9 @@ body{
   margin: 0;
   font-size: var(--fs-body);
   
+}
+ul{
+  list-style: none;
 }
 
 section {
